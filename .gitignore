@@ -1,0 +1,9 @@
+data/raw/*
+data/processed/*
+data/*.zip
+models/*
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
