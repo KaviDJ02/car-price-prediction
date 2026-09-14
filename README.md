@@ -54,15 +54,44 @@ Run the focused feature-engineering tests with:
 python -m pytest tests/test_feature_engineering.py -q
 ```
 
+## Full-stack application
+
+The project includes a FastAPI backend and a Vite + React frontend. The API
+loads the shared feature-engineering pipeline and serves `GET /health` and
+`POST /predict`. The frontend provides the appraisal form at `http://localhost:5173`.
+
+Create the ignored model artifacts before starting the API:
+
+```bash
+python -m src.train_model
+python -m uvicorn api.main:app --reload
+```
+
+In a second terminal, start the frontend:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173` to use the appraisal workspace. The Vite
+development proxy forwards `/api/predict` to the FastAPI `/predict` endpoint.
+Run the backend tests with:
+
+```bash
+python -m pytest tests -q
+```
+
 ## Project layout
 
 ```text
 data/          ignored raw and processed CSV files
 docs/          data dictionary and quality report
 notebooks/     planned EDA, preprocessing, feature engineering and modelling work
-src/           reusable preprocessing and feature-engineering code
+src/           preprocessing, feature engineering and model training code
 models/        ignored fitted model artifacts
-api/           future FastAPI prediction service
-frontend/      future Adalo integration assets
+api/           FastAPI prediction service
+frontend/      Vite + React appraisal interface
 tests/         automated tests
 ```
