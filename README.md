@@ -7,7 +7,7 @@ specifications.
 
 ## Demo
 
-Watch the application walkthrough: [demo.gif](public/demo.gif)
+![DriveValue application walkthrough](public/demo.gif)
 
 The demo shows the appraisal form, API-backed prediction flow, and returned
 price estimate.
