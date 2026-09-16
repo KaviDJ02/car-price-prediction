@@ -11,9 +11,6 @@ specifications.
   <img src="public/demo.gif" alt="DriveValue application walkthrough" width="800">
 </p>
 
-The demo shows the appraisal form, API-backed prediction flow, and returned
-price estimate.
-
 ## What is included
 
 - Data cleaning and profiling for the Used Cars Price Prediction dataset
