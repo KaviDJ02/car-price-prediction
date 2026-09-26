@@ -7,8 +7,4 @@ __pycache__/
 .venv/
 .pytest_cache/
 .ipynb_checkpoints/
-api/config.py
-api/schemas.py
 .venv/
-api/__init__.py
-api/
